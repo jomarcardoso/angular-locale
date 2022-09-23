@@ -26,3 +26,32 @@ Conceitos iniciais:
 ```
 
 - configurar o angular.json para gerar vários dists
+
+```json
+{
+  "projects": {
+      "angular.io-example": {
+        // ...
+        "i18n": {
+          "sourceLocale": "en-US",
+          "locales": {
+            "fr": {
+              "translation": "src/locale/messages.fr.xlf",
+              // ...
+            }
+          }
+        },
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:browser",
+            "options": {
+              "localize": true,
+            },
+            // ...
+          },
+        }
+      }
+    }
+  }
+}
+```
