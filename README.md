@@ -31,13 +31,11 @@ Conceitos iniciais:
 {
   "projects": {
       "angular.io-example": {
-        // ...
         "i18n": {
           "sourceLocale": "en-US",
           "locales": {
             "fr": {
               "translation": "src/locale/messages.fr.xlf",
-              // ...
             }
           }
         },
@@ -46,9 +44,37 @@ Conceitos iniciais:
             "builder": "@angular-devkit/build-angular:browser",
             "options": {
               "localize": true,
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+- criar as configurações para desenvolvimento
+
+```json
+{
+  "projects": {
+      "angular.io-example": {
+        "architect": {
+          "build": {
+            "configuration": {
+              "pt": {
+                "localize": ["pt"]
+              }
             },
-            // ...
           },
+          "serve": {
+            "builder": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+              "pt": {
+                "browserTarget": "angular.io-example:build:development,pt"
+              }
+            }
+          }
         }
       }
     }
