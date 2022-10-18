@@ -15,7 +15,7 @@ Conceitos iniciais:
 - [incluir expressões ICU para plurais](https://angular.io/guide/i18n-common-prepare#mark-plurals) `<span i18n>Updated {minutes, plural, =0 {just now} =1 {one minute ago} other {{{minutes}} minutes ago}}</span>`
 - [incluir expressões ICU para gênero] `<span i18n>The author is {gender, select, male {male} female {female} other {other}}</span>`
 - matar a pau `ng extract-i18n`
-- a tradução deve ser uma cópia do arquivo original com o sufixo do idioma `src/locales/messages.fr.xlf`
+- a tradução deve ser uma cópia do arquivo original com o sufixo do idioma `src/locale/messages.fr.xlf`
 - [altere o arquivo de tradução para incluir os `<target>`](https://angular.io/guide/i18n-common-translation-files)
 
 ```xlf
@@ -34,8 +34,8 @@ Conceitos iniciais:
         "i18n": {
           "sourceLocale": "en-US",
           "locales": {
-            "fr": {
-              "translation": "src/locale/messages.fr.xlf",
+            "pt": {
+              "translation": "src/locale/messages.pt.xlf",
             }
           }
         },
