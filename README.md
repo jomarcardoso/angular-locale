@@ -5,6 +5,11 @@ Conceitos iniciais:
 - i18n = internacionalização (internacionalization)
 - locale (localidade): é o idioma, unidade monetária, fuso horário, entre outros, de uma certa localidade, normalmente utilizado no padrão Unicode locale ID {idioma}-{LOCALIDADE} exemplo "pt-BR"
 
+Para aplicar a internacionalização num projeto Angular devimos seguir os seguintes passos:
+
+- fazer marcações no projeto indicando o que será traduzido
+- extrair os textos e traduzi-los
+
 ## [Passos](https://angular.io/guide/i18n-common-overview)
 
 - `ng add @angular/localize`
